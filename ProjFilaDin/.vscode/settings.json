@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "filadin.h": "c",
+        "stdio.h": "c"
+    }
+}
