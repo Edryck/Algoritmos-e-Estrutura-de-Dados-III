@@ -13,8 +13,6 @@ int main(){
     for(i=0; i < 4; i++)
         insere_lista_ordenada(li,a[i]);
 
-    insere_lista_final_circ(li, a[2]);
-
     imprime_lista(li);
     printf("\n\n\n\n Tamanho: %d\n",tamanho_lista(li));
 
