@@ -10,9 +10,16 @@ int main(){
     for(i=0; i < N; i++)
         insere_ArvBin(raiz,dados[i]);
 
+    printf("Pre ordem\n");
     preOrdem_ArvBin(raiz);
-    //emOrdem_ArvBin(raiz);
-    //posOrdem_ArvBin(raiz);
+
+    printf("\nEm ordem\n");
+    emOrdem_ArvBin(raiz);
+
+    printf("\nPos ordem\n");
+    posOrdem_ArvBin(raiz);
+
+    printf("\n");
 
     if(remove_ArvBin(raiz,50)){
         printf("removido\n");
@@ -21,9 +28,9 @@ int main(){
         printf("NAO removido\n");
 
 
-//    printf("altura: %d\n",altura_ArvBin(raiz));
-//    printf("total NOs: %d\n",totalNO_ArvBin(raiz));
-//
+    printf("altura: %d\n",altura_ArvBin(raiz));
+    printf("total NOs: %d\n",totalNO_ArvBin(raiz));
+
 //    if (consulta_ArvBin(raiz, 4, &al))
 //        printf("\n%d %s\n",al.mat,al.nome);
 
