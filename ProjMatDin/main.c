@@ -13,6 +13,7 @@ int main() {
 
     do {
         menu(m);
+        scanf("%d", &opcao);
 
         if (m == NULL) {
             // Matriz não existe
