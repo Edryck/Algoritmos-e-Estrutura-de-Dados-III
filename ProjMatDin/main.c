@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "matriz.h"
 
-void exibir_menu(Matriz* m);
+void menu(Matriz* m);
 
 int main() {
     Matriz* m = NULL;
@@ -12,7 +12,7 @@ int main() {
     Elemento* no_encontrado;
 
     do {
-        exibir_menu(m);
+        menu(m);
 
         if (m == NULL) {
             // Matriz não existe
