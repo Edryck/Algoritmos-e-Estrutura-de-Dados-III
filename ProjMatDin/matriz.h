@@ -33,4 +33,4 @@ int tamanho_total(const Matriz* m);
 int tamanho_usado(Matriz* m);
 
 
-#endif // MATRIZ_H
+#endif

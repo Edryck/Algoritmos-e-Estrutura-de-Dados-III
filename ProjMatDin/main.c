@@ -7,7 +7,7 @@ void menu(Matriz* m);
 int main() {
     Matriz* m = NULL;
     int opcao;
-    int linha, coluna, valor, x, y; 
+    int linha, coluna, valor, x, y;
     int valor_lido;
     Elemento* no_encontrado;
 
@@ -23,12 +23,12 @@ int main() {
                     scanf("%d", &linha);
                     printf("Digite o numero de colunas: ");
                     scanf("%d", &coluna);
-                    m = cria_matriz(linha, coluna); 
+                    m = cria_matriz(linha, coluna);
                     if (m != NULL) {
                         printf("Matriz %dx%d criada com sucesso!\n", linha, coluna);
                         imprime_matriz(m);
                     } else {
-                        printf("Erro: Dimensoes invalidas.\n");
+                        printf("Dimensoes invalidas.\n");
                     }
                     break;
                 case 0:
@@ -48,7 +48,7 @@ int main() {
                     if (insere_matriz(m, valor, x, y)) {
                         printf("Valor %d inserido em (%d, %d).\n", valor, x, y);
                     } else {
-                        printf("Erro: Posicao (%d, %d) fora dos limites da matriz.\n", x, y);
+                        printf("Posicao (%d, %d) fora dos limites da matriz.\n", x, y);
                     }
                     break;
                 case 2: // Remover Valor (definir como 0)
@@ -57,7 +57,7 @@ int main() {
                     if (remove_especifico(m, x, y)) { //
                         printf("Valor em (%d, %d) removido (definido como 0).\n", x, y);
                     } else {
-                        printf("Erro: Posicao (%d, %d) fora dos limites da matriz.\n", x, y);
+                        printf("Posicao (%d, %d) fora dos limites da matriz.\n", x, y);
                     }
                     break;
                 case 3: // Consultar Valor
@@ -66,7 +66,7 @@ int main() {
                     if (consulta_valor(m, x, y, &valor_lido)) {
                         printf("Valor na posicao (%d, %d) e: %d\n", x, y, valor_lido);
                     } else {
-                        printf("Erro: Posicao (%d, %d) fora dos limites da matriz.\n", x, y);
+                        printf("Posicao (%d, %d) fora dos limites da matriz.\n", x, y);
                     }
                     break;
                 case 4: // Buscar Valor
@@ -97,35 +97,34 @@ int main() {
                     printf("Matriz esta cheia (nenhum 0)? %s\n", matriz_cheia(m) ? "Sim" : "Nao");
                     break;
                 case 8: // Destruir Matriz
-                    libera_matriz(m); 
+                    libera_matriz(m);
                     printf("Matriz liberada. Voce pode criar uma nova.\n");
                     m = NULL;
                     break;
                 case 0: // Sair
                     printf("Saindo e liberando memoria...\n");
-                    libera_matriz(m); 
+                    libera_matriz(m);
                     break;
                 default:
                     printf("Opcao invalida. Tente novamente.\n");
                     break;
             }
         }
-
-        printf("\nPressione ENTER para continuar...");
+        system("pause");
     } while (opcao != 0);
 
     return 0;
 }
 
 void menu(Matriz* m) {
-    printf("\t\t\tMenu\n");
+    printf("\n\t\tMenu\n");
 
     if (m == NULL) {
         printf("A matriz ainda nao foi criada.\n\n");
         printf("1 - Criar Matriz\n");
         printf("0 - Sair\n");
     } else {
-        printf("Matriz %dx%d carregada.\n\n", m->linhas, m->colunas);
+        printf("\nMatriz %dx%d carregada.\n\n", m->linhas, m->colunas);
         printf("1 - Inserir Valor (x, y)\n");
         printf("2 - Remover Valor (x, y) (define como 0)\n");
         printf("3 - Consultar Valor (x, y)\n");
