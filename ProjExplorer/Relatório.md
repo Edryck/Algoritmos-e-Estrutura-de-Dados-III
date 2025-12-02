@@ -2,7 +2,7 @@ Relatório: Simulador de Sistema de Arquivos
 
 Integrantes:
 Edryck Freitas Nascimento, RA: a2727617
-Samuel, RA: a2727
+Samuel, RA: a2727820
 
 Este projeto consiste no desenvolvimento de um simulador de sistema de arquivos utilizando a linguagem C. O objetivo foi aplicar conceitos de estruturas de dados, especificamente árvores genéricas representadas no modelo "Filho Esquerdo - Irmão Direito" (First Child / Next Sibling), para criar uma hierarquia de diretórios e arquivos navegável via linha de comando.
 O sistema vai além das operações básicas, implementando funcionalidades inspiradas em sistemas operacionais reais, como Lixeira com remoção lógica e definitiva, navegação bidirecional, autocompletar inteligente e simulação de abertura de arquivos.
