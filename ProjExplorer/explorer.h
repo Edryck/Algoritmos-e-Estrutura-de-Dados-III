@@ -10,7 +10,7 @@ typedef int bool;
 
 // Estrutura do Nó
 typedef struct No {
-    char nome[100]; // Nome do nó
+    char nome[50]; // Nome do nó
     bool eArquivo; // Booleano para dizer se o nó atual é arquivo ou diretório        
     struct No *pai; // Nó pai do nó atual  
     struct No *primFilho; // Nó filho do nó atual
@@ -28,7 +28,6 @@ No* buscaFilho(No *pai, char *nome);
 void carregarArquivo(No *raiz, char *caminhoArquivo);
 // Libera a Árvore
 void liberarArvore(No *no);
-
 // Procura um nó "pai" pelo nome
 No* buscarAncestral(No *atual, char *nome);
 // Simula a abertura de um arquivo
@@ -37,8 +36,6 @@ void abrirArquivo(No *atual, char *nome);
 void moverParaLixeira(No *pai, char *nomeAlvo, No *lixeira);
 // Esvazia a lixeira
 void esvaziarLixeira(No *lixeira);
-
-// Comandos Básicos
 // <list> Lista o conteúdo do diretório
 void listar(No *atual);
 // <search> Procura por um arquivo ou diretório na árvore

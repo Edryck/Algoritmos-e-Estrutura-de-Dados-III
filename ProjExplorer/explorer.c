@@ -162,7 +162,7 @@ void listar(No *atual) {
     }
     while (filho != NULL) {
         if (strcmp(filho->nome, "Lixeira") != 0 || strcmp(atual->nome, "Lixeira") == 0) {
-             printf("  %s %s\n", filho->eArquivo ? "[ARQ]" : "[DIR]", filho->nome);
+             printf("  %s %s\n", filho->eArquivo ? "ARQUIVO" : "DIRETÓRIO", filho->nome);
         }
         filho = filho->proxIrmao;
     }

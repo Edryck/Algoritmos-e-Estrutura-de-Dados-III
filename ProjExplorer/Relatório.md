@@ -2,7 +2,7 @@ Relatório: Simulador de Sistema de Arquivos
 
 Integrantes:
 Edryck Freitas Nascimento, RA: a2727617
-Samuel, RA: a2727820
+Samuel Oliveira Simões da Silva, RA: a2727820
 
 Este projeto consiste no desenvolvimento de um simulador de sistema de arquivos utilizando a linguagem C. O objetivo foi aplicar conceitos de estruturas de dados, especificamente árvores genéricas representadas no modelo "Filho Esquerdo - Irmão Direito" (First Child / Next Sibling), para criar uma hierarquia de diretórios e arquivos navegável via linha de comando.
 O sistema vai além das operações básicas, implementando funcionalidades inspiradas em sistemas operacionais reais, como Lixeira com remoção lógica e definitiva, navegação bidirecional, autocompletar inteligente e simulação de abertura de arquivos.
@@ -19,7 +19,6 @@ typedef struct No {
     struct No *primFilho; // Aponta para o conteúdo da pasta (descida)
     struct No *proxIrmao; // Aponta para o próximo item no mesmo nível
 } No;
-
 
 Dessa forma permite que um diretório tenha um número potencialmente ilimitado de subpastas ou arquivos sem desperdício de memória e sem a complexidade de realocação de vetores dinâmicos.
 Além disso, o uso de um tipo booleano (bool) auxilia na distinção clara entre nós que representam arquivos e nós que representam diretórios, simplificando as decisões de navegação e de operações como open, cd e rm.
